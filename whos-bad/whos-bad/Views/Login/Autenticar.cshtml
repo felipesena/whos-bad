@@ -4,3 +4,20 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<div class="container-fluid" style="width: 60%">
+    <center><h3>Entrar</h3></center>
+    <form method="post" action="/login/autenticar">
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control mw-100" id="email" placeholder="Digite aqui o seu email">
+        </div>
+        <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input type="password" class="form-control mw-100" id="senha" placeholder="Digite aqui a sua senha">
+        </div>
+      
+        <div class="form-group">
+            <button type="submit" class="btn btn-secondary btn-block">Entrar</button>
+        </div>
+    </form>
+</div>
