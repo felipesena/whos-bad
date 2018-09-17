@@ -7,30 +7,42 @@
     <title>@ViewBag.Title - Who's Bad</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <style>
+       body{
+           margin: 0;
+           padding: 0;
+       }
+    </style>
+    @RenderSection("style", required: false)
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Who's Bad", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Início", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Sobre", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
-                </ul>
-            </div>
-        </div>
+       
+    <div class="container-fluid" style="width:100%">
+        <nav class="navbar navbar-expand navbar-dark bg-dark">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home">Who's Bad</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/home/about">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/home/contact">Contato</a>
+                </li>
+                <li class="nav-item text-right">
+                    <a class="nav-link" style="float:right" href="/login/cadastrar">Cadastrar-se</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="float:right" href="/login/autenticar">Entrar</a>
+                </li>
+            </ul>
+        </nav>
+        <div style="margin-top: 10px"></div>
+
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
+    @RenderBody()
+    <hr />
+    <div class="container-fluid">
         <footer>
             <p>&copy; @DateTime.Now.Year - Who's Bad</p>
         </footer>
@@ -39,5 +51,6 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    
 </body>
 </html>

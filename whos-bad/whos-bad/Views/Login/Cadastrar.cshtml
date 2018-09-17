@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Cadastrar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<center>
+    <div class="container-fluid" style="width: 75%">
+        <form method="post" action="/login/cadastrar">
+            <div class="form-group" style="width: 75%">
+                <label for="nome">Nome:</label>
+                <input type="text" class="form-control" id="nome" placeholder="Digite aqui o seu nome">
+            </div>
+            <div class="form-group">
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" class="form-control" id="sobrenome" placeholder="Digite aqui o seu sobrenome">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Digite aqui o seu email">
+            </div>
+            <div class="form-group">
+                <label for="nomeUsuario">Nome de Usuario:</label>
+                <input type="text" class="form-control" id="nomeUsuario" placeholder="Digite aqui o seu nome de usuário (a ser exibido no aplicativo)">
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" class="form-control" id="senha" placeholder="Digite aqui a sua senha">
+            </div>
+            <div class="form-group">
+                <label for="confirmaSenha">Confirmar senha:</label>
+                <input type="password" class="form-control" id="confirmaSenha" placeholder="Digite aqui a sua senha novamente">
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="sexo" id="sexoF" value="F">
+                <label class="form-check-label" for="sexoF">Feminino</label>
+            </div>
+            <div class="form-check form-check-inline form-group">
+                <input class="form-check-input" type="radio" name="sexo" id="sexoM" value="M">
+                <label class="form-check-label" for="sexoM">Masculino</label>
+            </div>
+            <div class="form-group">Tipo de Perfil:</div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="perfil" id="paciente" value="Paciente">
+                <label class="form-check-label" for="paciente">Paciente</label>
+            </div>
+            <div class="form-check form-check-inline form-group">
+                <input class="form-check-input" type="radio" name="perfil" id="terapeuta" value="Terapeuta">
+                <label class="form-check-label" for="terapeuta">Terapeuta</label>
+            </div>
+            <div class="form-group">
+                <label for="nomeUsuario">Número de Registro:</label>
+                <input type="text" class="form-control" id="numRegistro" disabled placeholder="Digite aqui o seu número de registro">
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-secondary btn-block">Cadastrar-se</button>
+            </div>
+        </form>
+    </div>
+
+</center>
