@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="RegistroId" />
           </Key>
-          <Property Name="RegistroId" Type="int" Nullable="false" />
+          <Property Name="RegistroId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Contexto" Type="varchar(max)" Nullable="false" />
           <Property Name="Atitude" Type="varchar(max)" Nullable="false" />
           <Property Name="Sentimento" Type="varchar(max)" Nullable="false" />
@@ -22,7 +22,7 @@
           <Key>
             <PropertyRef Name="UserId" />
           </Key>
-          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Nome" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="Sobrenome" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="Email" Type="varchar" MaxLength="60" Nullable="false" />
@@ -62,7 +62,7 @@
           <Key>
             <PropertyRef Name="RegistroId" />
           </Key>
-          <Property Name="RegistroId" Type="Int32" Nullable="false" />
+          <Property Name="RegistroId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Contexto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Atitude" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Sentimento" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
@@ -76,7 +76,7 @@
           <Key>
             <PropertyRef Name="UserId" />
           </Key>
-          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nome" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Sobrenome" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
