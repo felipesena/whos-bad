@@ -1,0 +1,74 @@
+﻿@model whos_bad.Models.Registro
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Registro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Contexto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contexto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Atitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Atitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sentimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sentimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Humor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Humor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pensamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pensamento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario.Nome)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RegistroId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
