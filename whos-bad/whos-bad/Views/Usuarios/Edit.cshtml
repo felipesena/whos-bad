@@ -5,9 +5,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Edit</h2>
-
 <div class="container-fluid" style="width: 60%">
+    <h2>Editar</h2>
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
@@ -97,4 +96,4 @@
     @section Scripts {
         @Scripts.Render("~/bundles/jqueryval")
     }
-    </div>
+</div>

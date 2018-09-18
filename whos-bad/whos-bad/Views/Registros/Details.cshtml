@@ -4,72 +4,73 @@
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div class="container-fluid" style="width: 60%">
+    <h2>Detalhes</h2>
 
-<h2>Details</h2>
+    <div>
+        <h4>Registro</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Contexto)
+            </dt>
 
-<div>
-    <h4>Registro</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Contexto)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Contexto)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Contexto)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Atitude)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Atitude)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Atitude)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Atitude)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Sentimento)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Sentimento)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Sentimento)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Sentimento)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Humor)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Humor)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Humor)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Humor)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Data)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Data)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Data)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Data)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Pensamento)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Pensamento)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Pensamento)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Pensamento)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Usuario.Nome)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Usuario.Nome)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Usuario.Nome)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Usuario.Nome)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.RegistroId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Editar", "Edit", new { id = Model.RegistroId }) |
+        @Html.ActionLink("<< Voltar", "Index")
+    </p>
+    </div>

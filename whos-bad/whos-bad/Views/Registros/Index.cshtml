@@ -5,66 +5,69 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<div class="container-fluid" style="width: 90%">
+    <h2>Cd-quests</h2>
+    <p>
+        @Html.ActionLink("Cadastrar CD-Quest", "Create")
+    </p>
+    <table class="table">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Contexto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Atitude)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sentimento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Humor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Data)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Pensamento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Usuario.Nome)
+                </th>
+                <th></th>
+            </tr>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Contexto)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Atitude)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Sentimento)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Humor)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Data)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Pensamento)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Usuario.Nome)
-        </th>
-        <th></th>
-    </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Contexto)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Atitude)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sentimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Humor)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Data)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Pensamento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usuario.Nome)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = item.RegistroId }) |
+                        @Html.ActionLink("Detalhes", "Details", new { id = item.RegistroId }) |
+                        @Html.ActionLink("Deletar", "Delete", new { id = item.RegistroId })
+                    </td>
+                </tr>
+            }
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Contexto)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Atitude)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Sentimento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Humor)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Data)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Pensamento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Usuario.Nome)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.RegistroId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.RegistroId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.RegistroId })
-        </td>
-    </tr>
-}
-
-</table>
+        </table>
+</div>
