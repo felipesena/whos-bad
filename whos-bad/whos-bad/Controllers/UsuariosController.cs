@@ -43,10 +43,10 @@ namespace whos_bad.Controllers
 
         // POST: Usuarios/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserId,Nome,Sobrenome,Email,Sexo,Perfil,NomeDeUsuario,RegistroConselho,DataDeNascimento")] Usuario usuario)
+        public ActionResult Create([Bind(Include = "UserId,Nome,Sobrenome,Email,Sexo,Perfil,NomeDeUsuario,RegistroConselho,DataDeNascimento,Senha")] Usuario usuario)
         {
             if (ModelState.IsValid)
             {
@@ -75,10 +75,10 @@ namespace whos_bad.Controllers
 
         // POST: Usuarios/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "UserId,Nome,Sobrenome,Email,Sexo,Perfil,NomeDeUsuario,RegistroConselho,DataDeNascimento")] Usuario usuario)
+        public ActionResult Edit([Bind(Include = "UserId,Nome,Sobrenome,Email,Sexo,Perfil,NomeDeUsuario,RegistroConselho,DataDeNascimento,Senha")] Usuario usuario)
         {
             if (ModelState.IsValid)
             {

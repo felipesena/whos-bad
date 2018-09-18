@@ -10,18 +10,18 @@ using whos_bad.Models;
 
 namespace whos_bad.Controllers
 {
-    public class RegistroesController : Controller
+    public class RegistrosController : Controller
     {
         private whosBadDBEntities db = new whosBadDBEntities();
 
-        // GET: Registroes
+        // GET: Registros
         public ActionResult Index()
         {
             var registro = db.Registro.Include(r => r.Usuario);
             return View(registro.ToList());
         }
 
-        // GET: Registroes/Details/5
+        // GET: Registros/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,16 +36,16 @@ namespace whos_bad.Controllers
             return View(registro);
         }
 
-        // GET: Registroes/Create
+        // GET: Registros/Create
         public ActionResult Create()
         {
             ViewBag.FKUserId = new SelectList(db.Usuario, "UserId", "Nome");
             return View();
         }
 
-        // POST: Registroes/Create
+        // POST: Registros/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "RegistroId,Contexto,Atitude,Sentimento,Humor,Data,Pensamento,FKUserId")] Registro registro)
@@ -61,7 +61,7 @@ namespace whos_bad.Controllers
             return View(registro);
         }
 
-        // GET: Registroes/Edit/5
+        // GET: Registros/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -77,9 +77,9 @@ namespace whos_bad.Controllers
             return View(registro);
         }
 
-        // POST: Registroes/Edit/5
+        // POST: Registros/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "RegistroId,Contexto,Atitude,Sentimento,Humor,Data,Pensamento,FKUserId")] Registro registro)
@@ -94,7 +94,7 @@ namespace whos_bad.Controllers
             return View(registro);
         }
 
-        // GET: Registroes/Delete/5
+        // GET: Registros/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -109,7 +109,7 @@ namespace whos_bad.Controllers
             return View(registro);
         }
 
-        // POST: Registroes/Delete/5
+        // POST: Registros/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

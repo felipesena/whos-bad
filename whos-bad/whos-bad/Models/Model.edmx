@@ -31,6 +31,7 @@
           <Property Name="NomeDeUsuario" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="RegistroConselho" Type="varchar" MaxLength="30" />
           <Property Name="DataDeNascimento" Type="date" Nullable="false" />
+          <Property Name="Senha" Type="nchar" MaxLength="30" Nullable="false" />
         </EntityType>
         <Association Name="FK_Registro_Usuario">
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
@@ -84,6 +85,7 @@
           <Property Name="NomeDeUsuario" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="RegistroConselho" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="DataDeNascimento" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Senha" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Registro" Relationship="Self.FK_Registro_Usuario" FromRole="Usuario" ToRole="Registro" />
         </EntityType>
         <Association Name="FK_Registro_Usuario">
@@ -138,6 +140,7 @@
                 <ScalarProperty Name="NomeDeUsuario" ColumnName="NomeDeUsuario" />
                 <ScalarProperty Name="RegistroConselho" ColumnName="RegistroConselho" />
                 <ScalarProperty Name="DataDeNascimento" ColumnName="DataDeNascimento" />
+                <ScalarProperty Name="Senha" ColumnName="Senha" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -2,87 +2,90 @@
 
 @{
     ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Delete</h2>
+<div class="container-fluid" style="width: 60%">
+    <h3>Tem certeza que deseja deletar este Usuario?</h3>
+    <div>
+        <h4>Usuario</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Nome)
+            </dt>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Usuario</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Nome)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Sobrenome)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Sobrenome)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Sobrenome)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Sobrenome)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Sexo)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Sexo)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Sexo)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Sexo)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Perfil)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Perfil)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Perfil)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Perfil)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.NomeDeUsuario)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.NomeDeUsuario)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.NomeDeUsuario)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.NomeDeUsuario)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.RegistroConselho)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.RegistroConselho)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.RegistroConselho)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.RegistroConselho)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.DataDeNascimento)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.DataDeNascimento)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.DataDeNascimento)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.DataDeNascimento)
-        </dd>
+        </dl>
 
-    </dl>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
-    }
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("<< Voltar", "Index")
+            </div>
+        }
+    </div>
 </div>
