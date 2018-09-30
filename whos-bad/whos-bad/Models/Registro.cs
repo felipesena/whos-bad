@@ -17,12 +17,15 @@ namespace whos_bad.Models
         public int RegistroId { get; set; }
         public string Contexto { get; set; }
         public string Atitude { get; set; }
-        public string Sentimento { get; set; }
-        public string Humor { get; set; }
+        public int FKSentimentoId { get; set; }
+        public int FKHumorId { get; set; }
+        public int IntensidadeDoSentimento { get; set; }
         public System.DateTime Data { get; set; }
         public string Pensamento { get; set; }
         public int FKUserId { get; set; }
     
+        public virtual Humor Humor { get; set; }
+        public virtual Sentimento Sentimento { get; set; }
         public virtual Usuario Usuario { get; set; }
     }
 }

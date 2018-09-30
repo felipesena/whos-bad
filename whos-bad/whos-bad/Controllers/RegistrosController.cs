@@ -40,6 +40,8 @@ namespace whos_bad.Controllers
         public ActionResult Create()
         {
             ViewBag.FKUserId = new SelectList(db.Usuario, "UserId", "Nome");
+
+
             return View();
         }
 
