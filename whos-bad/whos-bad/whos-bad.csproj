@@ -49,12 +49,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -168,31 +166,31 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Humor.cs">
-      <DependentUpon>whosBadModels.tt</DependentUpon>
+      <DependentUpon>WhosBad.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Registro.cs">
-      <DependentUpon>whosBadModels.tt</DependentUpon>
+      <DependentUpon>WhosBad.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Sentimento.cs">
-      <DependentUpon>whosBadModels.tt</DependentUpon>
+      <DependentUpon>WhosBad.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Usuario.cs">
-      <DependentUpon>whosBadModels.tt</DependentUpon>
+      <DependentUpon>WhosBad.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\whosBadModels.Context.cs">
+    <Compile Include="Models\WhosBad.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>whosBadModels.Context.tt</DependentUpon>
+      <DependentUpon>WhosBad.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\whosBadModels.cs">
+    <Compile Include="Models\WhosBad.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>whosBadModels.tt</DependentUpon>
+      <DependentUpon>WhosBad.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\whosBadModels.Designer.cs">
+    <Compile Include="Models\WhosBad.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>whosBadModels.edmx</DependentUpon>
+      <DependentUpon>WhosBad.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -213,15 +211,15 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Models\whosBadModels.Context.tt">
+    <Content Include="Models\WhosBad.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>whosBadModels.edmx</DependentUpon>
-      <LastGenOutput>whosBadModels.Context.cs</LastGenOutput>
+      <DependentUpon>WhosBad.edmx</DependentUpon>
+      <LastGenOutput>WhosBad.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\whosBadModels.tt">
+    <Content Include="Models\WhosBad.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>whosBadModels.edmx</DependentUpon>
-      <LastGenOutput>whosBadModels.cs</LastGenOutput>
+      <DependentUpon>WhosBad.edmx</DependentUpon>
+      <LastGenOutput>WhosBad.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -245,12 +243,12 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <EntityDeploy Include="Models\whosBadModels.edmx">
+    <EntityDeploy Include="Models\WhosBad.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>whosBadModels.Designer.cs</LastGenOutput>
+      <LastGenOutput>WhosBad.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\whosBadModels.edmx.diagram">
-      <DependentUpon>whosBadModels.edmx</DependentUpon>
+    <Content Include="Models\WhosBad.edmx.diagram">
+      <DependentUpon>WhosBad.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />

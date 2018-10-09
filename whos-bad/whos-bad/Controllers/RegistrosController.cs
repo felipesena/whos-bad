@@ -40,7 +40,8 @@ namespace whos_bad.Controllers
         public ActionResult Create()
         {
             ViewBag.FKUserId = new SelectList(db.Usuario, "UserId", "Nome");
-
+            ViewBag.FKSentimentoId = new SelectList(db.Humor, "HumorId", "Nome");
+            ViewBag.FKHumorId = new SelectList(db.Sentimento, "SentimentoId", "Nome");
 
             return View();
         }
@@ -50,7 +51,7 @@ namespace whos_bad.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "RegistroId,Contexto,Atitude,Sentimento,Humor,Data,Pensamento,FKUserId")] Registro registro)
+        public ActionResult Create([Bind(Include = "RegistroId,Contexto,Atitude,FKSentimentoId,FKHumorId,Data,Pensamento,FKUserId")] Registro registro)
         {
             if (ModelState.IsValid)
             {
@@ -60,6 +61,8 @@ namespace whos_bad.Controllers
             }
 
             ViewBag.FKUserId = new SelectList(db.Usuario, "UserId", "Nome", registro.FKUserId);
+            ViewBag.FKSentimentoId = new SelectList(db.Humor, "HumorId", "Nome");
+            ViewBag.FKHumorId = new SelectList(db.Sentimento, "SentimentoId", "Nome");
             return View(registro);
         }
 
@@ -76,6 +79,9 @@ namespace whos_bad.Controllers
                 return HttpNotFound();
             }
             ViewBag.FKUserId = new SelectList(db.Usuario, "UserId", "Nome", registro.FKUserId);
+            ViewBag.FKSentimentoId = new SelectList(db.Humor, "HumorId", "Nome", registro.FKHumorId);
+            ViewBag.FKHumorId = new SelectList(db.Sentimento, "SentimentoId", "Nome", registro.FKSentimentoId);
+
             return View(registro);
         }
 
@@ -84,7 +90,7 @@ namespace whos_bad.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "RegistroId,Contexto,Atitude,Sentimento,Humor,Data,Pensamento,FKUserId")] Registro registro)
+        public ActionResult Edit([Bind(Include = "RegistroId,Contexto,Atitude,FKSentimentoId,FKHumorId,Data,Pensamento,FKUserId")] Registro registro)
         {
             if (ModelState.IsValid)
             {
@@ -93,6 +99,8 @@ namespace whos_bad.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.FKUserId = new SelectList(db.Usuario, "UserId", "Nome", registro.FKUserId);
+            ViewBag.FKSentimentoId = new SelectList(db.Humor, "HumorId", "Nome", registro.FKHumorId);
+            ViewBag.FKHumorId = new SelectList(db.Sentimento, "SentimentoId", "Nome", registro.FKSentimentoId);
             return View(registro);
         }
 

@@ -27,7 +27,7 @@
             <textarea name="Atitude" class="form-control mw-100" placeholder="Digite aqui a Atitude que foi tomada"></textarea>
         </div>
 
-        <div class="form-group">
+        @*<div class="form-group">
             <label for="Sentimento">Sentimento:</label>
             <input type="text" name="Sentimento" class="form-control mw-100" placeholder="Digite aqui o que você sentiu">
         </div>
@@ -35,6 +35,18 @@
         <div class="form-group">
             <label for="Humor">Humor:</label>
             <input type="text" name="Humor" class="form-control mw-100" placeholder="Digite seu humor">
+        </div>*@
+
+        <div class="form-group">
+            <label for="FKSentimentoId">Sentimento:</label>
+            @Html.DropDownList("FKSentimentoId", null, htmlAttributes: new { @class = "form-control mw-100" })
+            @Html.ValidationMessageFor(model => model.FKSentimentoId, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            <label for="FKHumorId">Humor:</label>
+            @Html.DropDownList("FKHumorId", null, htmlAttributes: new { @class = "form-control mw-100" })
+            @Html.ValidationMessageFor(model => model.FKSentimentoId, "", new { @class = "text-danger" })
         </div>
 
         <div class="form-group">
