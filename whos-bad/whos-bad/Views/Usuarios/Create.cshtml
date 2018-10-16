@@ -4,6 +4,17 @@
     ViewBag.Title = "Cadastrar Usuário";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<script>
+   function exibe(id) {
+   if(document.getElementById(id).style.display=="none") {
+        document.getElementById(id).style.display = "block";
+    }
+    else {
+        document.getElementById(id).style.display = "none";
+    }
+}
+
+</script>
 
 <div class="container-fluid" style="width: 60%">
     <center><h3>Cadastrar-se</h3></center>
@@ -18,10 +29,7 @@
             <label for="sobrenome">Sobrenome:</label>
             <input type="text" name="Sobrenome" class="form-control mw-100" id="sobrenome" placeholder="Digite aqui o seu sobrenome">
         </div>
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" name="Email" class="form-control mw-100" id="email" placeholder="Digite aqui o seu email">
-        </div>
+
         <div class="form-group">
             <label for="nomeUsuario">Nome de Usuario:</label>
             <input type="text" name="NomeDeUsuario" class="form-control mw-100" id="nomeUsuario" placeholder="Digite aqui o seu nome de usuário (a ser exibido no aplicativo)">
@@ -48,7 +56,15 @@
             <input class="form-check-input" type="radio" name="Perfil" id="terapeuta" value="Terapeuta">
             <label class="form-check-label" for="terapeuta">Terapeuta</label>
         </div>
+
         <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" name="Email" class="form-control mw-100" id="email" placeholder="Digite aqui o seu email">
+        </div>
+
+        <input type="checkbox" name="registro" checked onclick="exibe('NumRegistro')" /> <label>Possui registro?</label>
+
+        <div class="form-group" id="NumRegistro">
             <label for="nomeUsuario">Número de Registro:</label>
             <input type="text" name="RegistroConselho" class="form-control mw-100" id="numRegistro" placeholder="Digite aqui o seu número de registro">
         </div>

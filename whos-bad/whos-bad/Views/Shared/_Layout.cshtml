@@ -1,22 +1,22 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Who's Bad</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <style>
-       body{
-           margin: 0;
-           padding: 0;
-       }
+        body {
+            margin: 0;
+            padding: 0;
+        }
     </style>
     @RenderSection("style", required: false)
 </head>
 <body>
-       
+
     <div class="container-fluid" style="width:100%">
         <nav class="navbar navbar-expand navbar-dark bg-dark">
             <ul class="navbar-nav float-right">
@@ -29,6 +29,16 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/Registros/Create">CD-Quest</a>
                 </li>
+                @if (Session["perfil"].ToString() == "Terapeuta")
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" href="/VisualizaRegistros/Index">Visualizar Registros</a>
+                    </li>
+                }
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Usuarios/Pref">Preferencias</a>
+                    </li>
             </ul>
         </nav>
         <div style="margin-top: 10px"></div>
@@ -45,6 +55,6 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
-    
+
 </body>
 </html>

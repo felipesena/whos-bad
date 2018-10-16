@@ -162,6 +162,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RegistrosController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
+    <Compile Include="Controllers\VisualizaRegistrosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -293,7 +294,6 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Login\Autenticar.cshtml" />
-    <Content Include="Views\Login\Cadastrar.cshtml" />
     <Content Include="Views\Registros\Create.cshtml" />
     <Content Include="Views\Registros\Delete.cshtml" />
     <Content Include="Views\Registros\Details.cshtml" />
@@ -304,6 +304,9 @@
     <Content Include="Views\Usuarios\Details.cshtml" />
     <Content Include="Views\Usuarios\Edit.cshtml" />
     <Content Include="Views\Usuarios\Index.cshtml" />
+    <Content Include="Views\VisualizaRegistros\Details.cshtml" />
+    <Content Include="Views\VisualizaRegistros\Index.cshtml" />
+    <Content Include="Views\VisualizaRegistros\registros.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

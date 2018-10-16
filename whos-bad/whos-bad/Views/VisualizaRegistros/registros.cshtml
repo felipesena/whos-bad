@@ -1,0 +1,46 @@
+﻿@model IEnumerable<whos_bad.Models.Registro>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid" style="width: 90%">
+    <h2>Cd-quests</h2>
+    <p>
+        @Html.ActionLink("Cadastrar CD-Quest", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Contexto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario.Nome)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Contexto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Data)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Usuario.Nome)
+                </td>
+                <td>
+                    @Html.ActionLink("Visualizar Completo", "Details", new { id = item.RegistroId }) |
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

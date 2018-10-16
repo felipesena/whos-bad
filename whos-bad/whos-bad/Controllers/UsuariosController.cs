@@ -20,6 +20,15 @@ namespace whos_bad.Controllers
             return View(db.Usuario.ToList());
         }
 
+        public ActionResult Pref()
+        {
+            int idUsuario = int.Parse(Session["idUsu"].ToString());
+
+            //return RedirectToAction("Edit", idUsuario);
+            return RedirectToRoute(new { controller = "Usuarios", action = "Edit", id = idUsuario });
+
+        }
+
         // GET: Usuarios/Details/5
         public ActionResult Details(int? id)
         {
