@@ -24,21 +24,33 @@
                     <a class="nav-link" href="/home">Who's Bad</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/Usuarios/Create">Cadastrar-se</a>
+                    <a class="nav-link float-lg-right" href="/Usuarios/Create">Cadastrar-se</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/Registros/Create">CD-Quest</a>
+                    <a class="nav-link float-lg-right" href="/Login/Autenticar">Entrar</a>
                 </li>
-                @if (Session["perfil"].ToString() == "Terapeuta")
+                @if (Session["perfil"] != null)
                 {
                     <li class="nav-item">
-                        <a class="nav-link" href="/VisualizaRegistros/Index">Visualizar Registros</a>
+                        <a class="nav-link" href="/Registros/Create">CD-Quest</a>
                     </li>
                 }
+                @if (Session["perfil"] != null)
+                {
+                    if (Session["perfil"].ToString() == "Terapeuta")
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="/VisualizaRegistros/Index">Visualizar Registros</a>
+                        </li>
+                    }
+                }
 
+                @if (Session["perfil"] != null)
+                {
                     <li class="nav-item">
                         <a class="nav-link" href="/Usuarios/Pref">Preferencias</a>
                     </li>
+                }
             </ul>
         </nav>
         <div style="margin-top: 10px"></div>
