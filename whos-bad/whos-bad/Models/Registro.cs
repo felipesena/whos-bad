@@ -14,6 +14,12 @@ namespace whos_bad.Models
     
     public partial class Registro
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Registro()
+        {
+            this.Feedback = new HashSet<Feedback>();
+        }
+    
         public int RegistroId { get; set; }
         public string Contexto { get; set; }
         public string Atitude { get; set; }
@@ -24,6 +30,8 @@ namespace whos_bad.Models
         public string Pensamento { get; set; }
         public int FKUserId { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Feedback> Feedback { get; set; }
         public virtual Humor Humor { get; set; }
         public virtual Sentimento Sentimento { get; set; }
         public virtual Usuario Usuario { get; set; }

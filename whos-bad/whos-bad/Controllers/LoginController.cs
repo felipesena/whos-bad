@@ -9,26 +9,22 @@ namespace whos_bad.Controllers
 {
     public class LoginController : Controller
     {
-        private whosBadDBEntities db = new whosBadDBEntities();
+        private Entities db = new Entities();
         // GET: Login
         public ActionResult Autenticar()
         {
-            Session["erro"] = "";
-            Session["idUsu"] = "";
-            Session["NomeUsu"] = "";
-            Session["perfil"] = "";
             return View();
         }
 
         [HttpPost]
         public ActionResult Autenticar(string login, string senha)
         {
-            Usuario usu = db.Usuario.Where(e => e.NomeDeUsuario == login).First();
-
-            if(usu != null)
+            try
             {
+                Usuario usu = db.Usuario.Where(e => e.NomeDeUsuario == login).First();
+
                 string senhaUsu = usu.Senha.Split(' ')[0];
-                if(senhaUsu == senha)
+                if (senhaUsu == senha)
                 {
                     Session["idUsu"] = usu.UserId;
                     Session["NomeUsu"] = usu.Nome;
@@ -36,18 +32,36 @@ namespace whos_bad.Controllers
                     Session["erro"] = "";
                     return RedirectToAction("Index", "Home");
                 }
+                else
+                {
+                    Session["erro"] = "Usuário e/ou senha digitados são inválidos.";
+                    return View();
+                }
             }
-            Session["idUsu"] = "";
-            Session["NomeUsu"] = "";
-            Session["perfil"] = "";
-            Session["erro"] = "Erro ao logar no sistema";
+            catch
+            {
+                Session["idUsu"] = null;
+                Session["NomeUsu"] = null;
+                Session["perfil"] = null;
+                Session["erro"] = "O usuário informado não existe";
+                return View();
+            }
 
-            return View();
         }
 
         public ActionResult Cadastrar()
         {
             return View();
+        }
+        [Route("Login/Logout")]
+        public ActionResult Logout()
+        {
+            Session["idUsu"] = null;
+            Session["NomeUsu"] = null;
+            Session["perfil"] = null;
+            Session["erro"] = null;
+
+            return RedirectToAction("Index", "Home");
         }
     }
 }

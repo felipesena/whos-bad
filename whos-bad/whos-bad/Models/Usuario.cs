@@ -30,6 +30,7 @@ namespace whos_bad.Models
         public string RegistroConselho { get; set; }
         public System.DateTime DataDeNascimento { get; set; }
         public string Senha { get; set; }
+        public Nullable<int> Visibilidade { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Registro> Registro { get; set; }

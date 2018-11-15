@@ -166,32 +166,35 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Feedback.cs">
+      <DependentUpon>whosBadDBEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Humor.cs">
-      <DependentUpon>WhosBad.tt</DependentUpon>
+      <DependentUpon>whosBadDBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Registro.cs">
-      <DependentUpon>WhosBad.tt</DependentUpon>
+      <DependentUpon>whosBadDBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Sentimento.cs">
-      <DependentUpon>WhosBad.tt</DependentUpon>
+      <DependentUpon>whosBadDBEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Usuario.cs">
-      <DependentUpon>WhosBad.tt</DependentUpon>
+      <DependentUpon>whosBadDBEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\WhosBad.Context.cs">
+    <Compile Include="Models\whosBadDBEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>WhosBad.Context.tt</DependentUpon>
+      <DependentUpon>whosBadDBEntities.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\WhosBad.cs">
+    <Compile Include="Models\whosBadDBEntities.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>WhosBad.tt</DependentUpon>
+      <DependentUpon>whosBadDBEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\WhosBad.Designer.cs">
+    <Compile Include="Models\whosBadDBEntities.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>WhosBad.edmx</DependentUpon>
+      <DependentUpon>whosBadDBEntities.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -212,15 +215,15 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Models\WhosBad.Context.tt">
+    <Content Include="Models\whosBadDBEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>WhosBad.edmx</DependentUpon>
-      <LastGenOutput>WhosBad.Context.cs</LastGenOutput>
+      <DependentUpon>whosBadDBEntities.edmx</DependentUpon>
+      <LastGenOutput>whosBadDBEntities.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\WhosBad.tt">
+    <Content Include="Models\whosBadDBEntities.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>WhosBad.edmx</DependentUpon>
-      <LastGenOutput>WhosBad.cs</LastGenOutput>
+      <DependentUpon>whosBadDBEntities.edmx</DependentUpon>
+      <LastGenOutput>whosBadDBEntities.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -244,12 +247,12 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <EntityDeploy Include="Models\WhosBad.edmx">
+    <EntityDeploy Include="Models\whosBadDBEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>WhosBad.Designer.cs</LastGenOutput>
+      <LastGenOutput>whosBadDBEntities.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\WhosBad.edmx.diagram">
-      <DependentUpon>WhosBad.edmx</DependentUpon>
+    <Content Include="Models\whosBadDBEntities.edmx.diagram">
+      <DependentUpon>whosBadDBEntities.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -270,7 +273,9 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
