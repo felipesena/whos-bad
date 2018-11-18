@@ -21,6 +21,13 @@ namespace whos_bad.Controllers
             return View(registro.ToList());
         }
 
+        public ActionResult Feedbacks(int? id)
+        {
+            Session["FKRegistroId"] = id;
+
+            return RedirectToAction("Create", "Feedbacks");
+        }
+
         // GET: VisualizaRegistros/Details/5
         public ActionResult registros(int? id)
         {

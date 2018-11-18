@@ -158,6 +158,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ComportamentosController.cs" />
+    <Compile Include="Controllers\FeedbacksController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RegistrosController.cs" />
@@ -315,6 +317,16 @@
     <Content Include="Views\VisualizaRegistros\Details.cshtml" />
     <Content Include="Views\VisualizaRegistros\Index.cshtml" />
     <Content Include="Views\VisualizaRegistros\registros.cshtml" />
+    <Content Include="Views\Comportamentos\Create.cshtml" />
+    <Content Include="Views\Comportamentos\Delete.cshtml" />
+    <Content Include="Views\Comportamentos\Details.cshtml" />
+    <Content Include="Views\Comportamentos\Edit.cshtml" />
+    <Content Include="Views\Comportamentos\Index.cshtml" />
+    <Content Include="Views\Feedbacks\Create.cshtml" />
+    <Content Include="Views\Feedbacks\Delete.cshtml" />
+    <Content Include="Views\Feedbacks\Details.cshtml" />
+    <Content Include="Views\Feedbacks\Edit.cshtml" />
+    <Content Include="Views\Feedbacks\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
