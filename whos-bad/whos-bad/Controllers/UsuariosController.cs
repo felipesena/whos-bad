@@ -12,7 +12,7 @@ namespace whos_bad.Controllers
 {
     public class UsuariosController : Controller
     {
-        private Entities db = new Entities();
+        private whosBadDBEntities db = new whosBadDBEntities();
 
         // GET: Usuarios
         public ActionResult Index()

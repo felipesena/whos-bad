@@ -14,10 +14,10 @@ namespace whos_bad.Models
     
     public partial class Feedback
     {
-        public int Id { get; set; }
+        public int FeedbackId { get; set; }
         public string Texto { get; set; }
         public System.DateTime Data { get; set; }
-        public int FKRegistro { get; set; }
+        public int FKRegistroId { get; set; }
     
         public virtual Registro Registro { get; set; }
     }

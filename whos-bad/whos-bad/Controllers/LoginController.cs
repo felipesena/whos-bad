@@ -9,7 +9,7 @@ namespace whos_bad.Controllers
 {
     public class LoginController : Controller
     {
-        private Entities db = new Entities();
+        private whosBadDBEntities db = new whosBadDBEntities();
         // GET: Login
         public ActionResult Autenticar()
         {

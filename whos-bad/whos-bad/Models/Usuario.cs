@@ -17,6 +17,7 @@ namespace whos_bad.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Usuario()
         {
+            this.Comportamento = new HashSet<Comportamento>();
             this.Registro = new HashSet<Registro>();
         }
     
@@ -30,8 +31,9 @@ namespace whos_bad.Models
         public string RegistroConselho { get; set; }
         public System.DateTime DataDeNascimento { get; set; }
         public string Senha { get; set; }
-        public Nullable<int> Visibilidade { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Comportamento> Comportamento { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Registro> Registro { get; set; }
     }

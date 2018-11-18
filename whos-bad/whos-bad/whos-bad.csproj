@@ -166,35 +166,38 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Comportamento.cs">
+      <DependentUpon>whosBadDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Feedback.cs">
-      <DependentUpon>whosBadDBEntities.tt</DependentUpon>
+      <DependentUpon>whosBadDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Humor.cs">
-      <DependentUpon>whosBadDBEntities.tt</DependentUpon>
+      <DependentUpon>whosBadDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Registro.cs">
-      <DependentUpon>whosBadDBEntities.tt</DependentUpon>
+      <DependentUpon>whosBadDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Sentimento.cs">
-      <DependentUpon>whosBadDBEntities.tt</DependentUpon>
+      <DependentUpon>whosBadDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Usuario.cs">
-      <DependentUpon>whosBadDBEntities.tt</DependentUpon>
+      <DependentUpon>whosBadDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\whosBadDBEntities.Context.cs">
+    <Compile Include="Models\whosBadDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>whosBadDBEntities.Context.tt</DependentUpon>
+      <DependentUpon>whosBadDB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\whosBadDBEntities.cs">
+    <Compile Include="Models\whosBadDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>whosBadDBEntities.tt</DependentUpon>
+      <DependentUpon>whosBadDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\whosBadDBEntities.Designer.cs">
+    <Compile Include="Models\whosBadDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>whosBadDBEntities.edmx</DependentUpon>
+      <DependentUpon>whosBadDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -215,15 +218,15 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Models\whosBadDBEntities.Context.tt">
+    <Content Include="Models\whosBadDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>whosBadDBEntities.edmx</DependentUpon>
-      <LastGenOutput>whosBadDBEntities.Context.cs</LastGenOutput>
+      <DependentUpon>whosBadDB.edmx</DependentUpon>
+      <LastGenOutput>whosBadDB.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\whosBadDBEntities.tt">
+    <Content Include="Models\whosBadDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>whosBadDBEntities.edmx</DependentUpon>
-      <LastGenOutput>whosBadDBEntities.cs</LastGenOutput>
+      <DependentUpon>whosBadDB.edmx</DependentUpon>
+      <LastGenOutput>whosBadDB.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -247,12 +250,12 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <EntityDeploy Include="Models\whosBadDBEntities.edmx">
+    <EntityDeploy Include="Models\whosBadDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>whosBadDBEntities.Designer.cs</LastGenOutput>
+      <LastGenOutput>whosBadDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\whosBadDBEntities.edmx.diagram">
-      <DependentUpon>whosBadDBEntities.edmx</DependentUpon>
+    <Content Include="Models\whosBadDB.edmx.diagram">
+      <DependentUpon>whosBadDB.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />

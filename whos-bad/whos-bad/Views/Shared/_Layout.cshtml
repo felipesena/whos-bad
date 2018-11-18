@@ -34,12 +34,18 @@
                 }
                 @if (Session["perfil"] != null)
                 {
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Registros/Create">CD-Quest</a>
-                    </li>
-                }
-                @if (Session["perfil"] != null)
-                {
+                    if (Session["perfil"].ToString() == "Paciente")
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Registros/Create">CD-Quest</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Comportamentos/Cadastrar">Cadastrar Comportamento</a>
+                        </li>
+
+                    }
+
                     if (Session["perfil"].ToString() == "Terapeuta")
                     {
                         <li class="nav-item">
@@ -53,9 +59,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/Usuarios/Pref">Preferencias</a>
                     </li>
-                }
-                @if (Session["perfil"] != null)
-                {
+
                     <li class="nav-item">
                         <a class="nav-link" href="/Login/Logout">Logout</a>
                     </li>
